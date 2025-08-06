@@ -1,0 +1,98 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+
+	height: 100dvh;
+	perspective: 1000px;
+	font: 16px/1.4 sans-serif;
+	overflow: hidden;
+
+	background: url("imgs/bgs/background.jpg") no-repeat center/cover fixed;
+
+	@media screen and (max-width: 600px) {
+		background-image: url("imgs/bgs/background_phone.jpg");
+	}
+}
+
+.book {
+	cursor: pointer;
+	display: flex;
+	margin: auto;
+	width: 300px;
+	height: 450;
+
+	transform-style: preserve-3d;
+	transition: translate 1s;
+	translate: calc(min(var(--c), 1) * 50%) 0%;
+	rotate: 1 0 0 30deg;
+}
+
+.page {
+	--page-color: RGB(224, 201, 166);
+	--page-color2: RGB(240, 226, 211);
+	--thickness: 7;
+	flex: none;
+	display: flex;
+	width: 100%;
+	user-select: none;
+	border: 3px solid var(--page-color);
+
+	transform-style: preserve-3d;
+	transform-origin: left center;
+	transition: transform 1s,
+		rotate 1s ease-in
+			calc((min(var(--i), var(--c)) - max(var(--i), var(--c))) * 50ms);
+	translate: calc(var(--i) * -100%) 0px 0px;
+	transform: translateZ(
+		calc((var(--c) - var(--i) - 0.5) * calc(var(--thickness) * 1px))
+	);
+	rotate: 0 1 0 calc(clamp(0, var(--c) - var(--i), 1) * -180deg);
+}
+
+.page .card h5 {
+	margin-bottom: 5px;
+}
+
+.page .card p {
+	margin-bottom: 5px;
+	font-size: .8rem;
+	text-align: justify;
+}
+
+.page img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+#ciri,
+#geralt {
+	display: inline;
+	width: 40%;
+	height: auto;
+}
+
+.front,
+.back {
+	flex: none;
+	width: 100%;
+	padding: 2rem;
+	backface-visibility: hidden;
+	background-color: var(--page-color);
+	translate: 0px;
+}
+.back {
+	background-image: linear-gradient(to right, var(--page-color) 80%, var(--page-color2) 100%);
+	translate: -100% 0;
+	rotate: 0 1 0 180deg;
+}
+
+.cover {
+	background: url(imgs/book_cover.jpg) no-repeat center/cover;
+	border: 5px solid rgba(34, 2, 34, 0.733);
+}
