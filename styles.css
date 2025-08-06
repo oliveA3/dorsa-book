@@ -29,7 +29,7 @@ body {
 	transform-style: preserve-3d;
 	transition: translate 1s;
 	translate: calc(min(var(--c), 1) * 50%) 0%;
-	rotate: 1 0 0 30deg;
+	rotate: 1 0 0 22deg;
 }
 
 .page {
@@ -71,7 +71,11 @@ body {
 }
 
 .back {
-	background-image: linear-gradient(to right, var(--page-color) 80%, var(--page-color2) 100%);
+	background-image: linear-gradient(
+		to right,
+		var(--page-color) 80%,
+		var(--page-color2) 100%
+	);
 	translate: -100% 0;
 	rotate: 0 1 0 180deg;
 }
@@ -99,7 +103,7 @@ body {
 .page .witcher_imgs img {
 	width: 33%;
 	height: auto;
-	opacity: .9;
+	opacity: 0.9;
 	filter: drop-shadow(2px 1px rgba(0, 0, 0, 0.322));
 }
 
@@ -108,7 +112,7 @@ body {
 .page .card h5,
 .page .card p {
 	margin-bottom: 5px;
-	font-size: .8rem;
+	font-size: 0.8rem;
 }
 
 .page .card p {
@@ -191,7 +195,7 @@ body {
 
 .page .friends img:first-child {
 	width: 76%;
-	opacity: 0.8;
+	opacity: 0.75;
 }
 
 .page .friends img:last-child {
@@ -206,7 +210,7 @@ body {
 }
 
 .page .gg_media img {
-	opacity: .9;
+	opacity: 0.9;
 }
 
 .page .gg_text {
@@ -234,12 +238,96 @@ body {
 
 .page .raven_text p {
 	text-align: justify;
-	font-size: .95rem;
+	font-size: 0.95rem;
 }
 
-.karamyr_text {
+.page .karamyr_text,
+.page .karamyr_text2 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 25px;
+}
+
+.page .karamyr_text img {
+	width: 90%;
+}
+
+.page .karamyr_text2 img {
+	width: 80%;
+}
+
+/*--------------->>> GREECE <<<---------------*/
+
+.page .percy_text {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	gap: 20px;
+}
+
+.page .wolf_text {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+}
+
+.page .wolf_text img {
+	width: 80%;
+}
+
+.page .epic_imgs {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 5px;
+}
+
+.page .epic_imgs img {
+	width: 80%;
+	height: 190px;
+}
+
+/*--------------->>> HAMILTON <<<---------------*/
+
+.page .hamilton {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 40px;
+}
+
+.page .hamilton > img {
+	height: 200px;
+}
+
+.page .hamilton_text {
+	margin-top: 10px;
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}
+
+.page .hamilton_text img {
+	width: 40%;
+}
+
+/*--------------->>> MUSIC <<<---------------*/
+
+.instruments {
+	display: flex;
+	gap: 10px;
+	height: 50%;
+	margin-bottom: 20px;
+}
+.instruments img {
+	width: 110px;
+}
+
+.adele {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
 }
