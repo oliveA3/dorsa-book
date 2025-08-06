@@ -331,3 +331,27 @@ body {
 	align-items: center;
 	gap: 10px;
 }
+
+/*--------------->>> OTROS <<<---------------*/
+
+.page .arcane_text {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.page .arcane_text img {
+	width: 90%;
+}
+
+.page .otras_imgs {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 5px;
+}
+
+.page .otras_imgs img {
+	width: 80%;
+	height: 190px;
+}
