@@ -321,7 +321,9 @@ body {
 	height: 50%;
 	margin-bottom: 20px;
 }
+
 .instruments img {
+	opacity: .8;
 	width: 110px;
 }
 
@@ -338,20 +340,67 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	text-align: justify;
+	gap: 10px;
 }
 
 .page .arcane_text img {
-	width: 90%;
+	height: 280px;
+	width: 75%;
 }
 
-.page .otras_imgs {
+.page .asis_text {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: justify;
+	gap: 15px;
+}
+
+.page .asis_text img {
+	width: 70%;
+}
+
+.page .wanda_imgs {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	gap: 5px;
 }
 
-.page .otras_imgs img {
+.page .wanda_imgs img {
+	opacity: .9;
 	width: 80%;
 	height: 190px;
+}
+
+.page .maincra_adhd {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+}
+
+.page .adhd_text {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 5px;
+}
+
+.page .adhd_text img {
+	width: 40%;
+}
+
+/*--------------->>> SANDERSON <<<---------------*/
+
+.page .stormlight_text {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 15px;
+}
+
+.page .stormlight_text img {
+	height: 270px;
 }
