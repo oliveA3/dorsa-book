@@ -115,7 +115,7 @@ body {
 	font-size: 0.8rem;
 }
 
-.page .card p {
+.page .card p:last-child {
 	text-align: justify;
 }
 
@@ -257,6 +257,10 @@ body {
 	width: 80%;
 }
 
+.page .karamyr_text2 p {
+	text-align: justify;
+}
+
 /*--------------->>> GREECE <<<---------------*/
 
 .page .percy_text {
@@ -354,11 +358,11 @@ body {
 	flex-direction: column;
 	align-items: center;
 	text-align: justify;
-	gap: 15px;
+	gap: 10px;
 }
 
 .page .asis_text img {
-	width: 70%;
+	width: 60%;
 }
 
 .page .wanda_imgs {
@@ -374,25 +378,38 @@ body {
 	height: 190px;
 }
 
-.page .maincra_adhd {
+.page .adhd_text {
+	margin-top: 10px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 20px;
+	gap: 25px;
 }
 
-.page .adhd_text {
+.page .adhd_text img {
+	width: 75%;
+}
+
+.page .adhd_maincra {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	gap: 5px;
 }
 
-.page .adhd_text img {
-	width: 40%;
+/*--------------->>> SANDERSON <<<---------------*/
+
+.page .dorsa_text {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 15px;
 }
 
-/*--------------->>> SANDERSON <<<---------------*/
+.page .dorsa_text img {
+	width: 75%;
+	opacity: .9;
+}
 
 .page .stormlight_text {
 	display: flex;
@@ -403,4 +420,26 @@ body {
 
 .page .stormlight_text img {
 	height: 270px;
+}
+
+.page .stormlight_text p {
+	text-align: justify;
+}
+
+/*--------------->>> LAST PAGE <<<---------------*/
+
+.page .last_page {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 15px;
+}
+
+.page .last_page p {
+	margin-top: 15px;
+	text-align: justify;
+}
+
+.page .last_page img {
+	width: 90%;
 }
