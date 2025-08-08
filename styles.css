@@ -397,6 +397,14 @@ body {
 	gap: 5px;
 }
 
+.page .adhd_maincra img:first-child {
+	height: 220px;
+}
+
+.page .adhd_maincra img:last-child {
+	height: 150px;
+}
+
 /*--------------->>> SANDERSON <<<---------------*/
 
 .page .dorsa_text {
