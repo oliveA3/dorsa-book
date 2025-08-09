@@ -383,26 +383,27 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 25px;
+	gap: 10px;
 }
 
-.page .adhd_text img {
-	width: 75%;
+.page .adhd_text img:first-child {
+	width: 90%;
 }
 
-.page .adhd_maincra {
+.page .adhd_text img:last-child {
+	width: 45%;
+}
+
+.page .adhd_imgs {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	gap: 5px;
 }
 
-.page .adhd_maincra img:first-child {
-	height: 220px;
-}
-
-.page .adhd_maincra img:last-child {
-	height: 150px;
+.page .adhd_imgs img {
+	width: 80%;
+	height: 190px;
 }
 
 /*--------------->>> SANDERSON <<<---------------*/
