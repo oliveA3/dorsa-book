@@ -242,6 +242,10 @@ body {
 	font-size: 0.95rem;
 }
 
+.page .karamyr_text {
+	margin-top: 10px;
+}
+
 .page .karamyr_text,
 .page .karamyr_text2 {
 	display: flex;
