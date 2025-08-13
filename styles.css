@@ -12,10 +12,10 @@ body {
 	font: 16px/1.4 "Comic Sans";
 	overflow: hidden;
 
-	background: url("imgs/bgs/background.jpg") no-repeat center/cover fixed;
+	background: url("imgs/   bgs/background.jpg") no-repeat center/cover fixed;
 
 	@media screen and (max-width: 600px) {
-		background-image: url("imgs/bgs/background_phone.jpg");
+		background-image: url("imgs/   bgs/background_phone.jpg");
 	}
 }
 
@@ -261,13 +261,37 @@ body {
 	text-align: justify;
 }
 
+/*--------------->>> MARVEL <<<---------------*/
+
+.page .marvel {
+	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+}
+
+.page .marvel_text {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}
+
+.page .marvel_text img {
+	width: 50%;
+}
+
 /*--------------->>> GREECE <<<---------------*/
 
 .page .percy_text {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 20px;
+	gap: 10px;
+}
+
+.page .percy_text img {
+	height: 280px;
 }
 
 .page .wolf_text {
@@ -378,10 +402,19 @@ body {
 	height: 190px;
 }
 
-.page .adhd_text {
+.page .adhd {
 	margin-top: 10px;
 	display: flex;
 	flex-direction: column;
+	align-items: center;
+}
+
+.page .adhd > img {
+	margin-bottom: 25px;
+}
+
+.page .adhd_text {
+	display: flex;
 	align-items: center;
 	gap: 10px;
 }
