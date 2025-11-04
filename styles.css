@@ -90,6 +90,7 @@ body {
 .page .witcher_text {
 	display: flex;
 	flex-direction: column;
+	text-align: justify;
 	gap: 30px;
 	margin-top: 15px;
 }
@@ -365,6 +366,17 @@ body {
 	flex-direction: column;
 	align-items: center;
 	gap: 10px;
+}
+
+.page .jamie_text {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+}
+
+.page .jamie_text img {
+	width: 80%;
 }
 
 /*--------------->>> OTROS <<<---------------*/
