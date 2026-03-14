@@ -1,17 +1,37 @@
 "use strict";
 
 const flipBook = (elBook) => {
-    elBook.style.setProperty("--c", 0);
-    elBook.querySelectorAll(".page").forEach((page, idx) => {
-        page.style.setProperty("--i", idx);
-        page.addEventListener("click", (evt) => {
-            const isFront = evt.target.closest(".front") !== null;
-            const isBack = evt.target.closest(".back") !== null;
+    let currentPage = 0;
+    const pages = elBook.querySelectorAll(".page");
+    const totalPages = pages.length;
 
-            if (isFront) {
-                elBook.style.setProperty("--c", idx + 1);
-            } else if (isBack) {
-                elBook.style.setProperty("--c", idx);
+    elBook.style.setProperty("--c", currentPage);
+
+    pages.forEach((page, idx) => {
+        page.style.setProperty("--i", idx);
+    });
+
+    elBook.addEventListener("click", (evt) => {
+        // Bloqueo manual: si el clic es en el audio, no hagas NADA
+        if (evt.target.closest("audio")) {
+            return;
+        }
+
+        const isBack = evt.target.closest(".back");
+
+        if (isBack) {
+            currentPage = Math.max(0, currentPage - 1);
+        } else {
+            currentPage = Math.min(totalPages, currentPage + 1);
+        }
+
+        elBook.style.setProperty("--c", currentPage);
+
+        pages.forEach((page, idx) => {
+            if (idx === currentPage || idx === currentPage - 1) {
+                page.style.pointerEvents = "auto";
+            } else {
+                page.style.pointerEvents = "none";
             }
         });
     });

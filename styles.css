@@ -1,85 +1,94 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 body {
-    display: flex;
+	display: flex;
 
-    height: 100dvh;
-    perspective: 1000px;
-    font: 16px/1.4 "Comic Sans";
-    overflow: hidden;
+	height: 100dvh;
+	perspective: 1000px;
+	font: 16px/1.4 "Comic Sans";
+	overflow: hidden;
 
-    background: url("imgs/bgs/background.jpg") no-repeat center/cover fixed;
+	background: url("imgs/bgs/background.jpg") no-repeat center/cover fixed;
 
-    @media screen and (max-width: 600px) {
-        background-image: url("imgs/bgs/background_phone.jpg");
-    }
+	@media screen and (max-width: 600px) {
+		background-image: url("imgs/bgs/background_phone.jpg");
+	}
 }
 
 .book {
-    cursor: pointer;
-    display: flex;
-    margin: auto;
-    width: 300px;
-    height: 450px;
+	cursor: pointer;
+	display: flex;
+	margin: auto;
+	width: 300px;
+	height: 450px;
 
-    transform-style: preserve-3d;
-    transition: translate 1s;
-    translate: calc(min(var(--c), 1) * 50%) 0%;
-    rotate: 1 0 0 22deg;
+	transform-style: preserve-3d;
+	transition: translate 1s;
+	translate: calc(min(var(--c), 1) * 50%) 0%;
+	rotate: 1 0 0 22deg;
 }
 
-/*--------------->>> PAGES <<<---------------*/
-
 .page {
-    --page-color: RGB(224, 201, 166);
-    --page-color2: RGB(240, 226, 211);
-    --thickness: 7;
-    flex: none;
-    display: flex;
-    width: 100%;
-    user-select: none;
-    border: 3px solid var(--page-color);
+	--page-color: RGB(224, 201, 166);
+	--page-color2: RGB(240, 226, 211);
+	--thickness: 7;
+    
+	flex: none;
+	display: flex;
+	width: 100%;
+	user-select: none;
+	border: 3px solid var(--page-color);
 
-    transform-style: preserve-3d;
-    transform-origin: left center;
-    transition:
-        transform 1s,
-        rotate 1s ease-in
-            calc((min(var(--i), var(--c)) - max(var(--i), var(--c))) * 50ms);
-    translate: calc(var(--i) * -100%) 0px 0px;
-    transform: translateZ(
-        calc((var(--c) - var(--i) - 0.5) * calc(var(--thickness) * 1px))
-    );
-    rotate: 0 1 0 calc(clamp(0, var(--c) - var(--i), 1) * -180deg);
+	transform-style: preserve-3d;
+	transform-origin: left center;
+	transition: transform 1s,
+		rotate 1s ease-in
+			calc((min(var(--i), var(--c)) - max(var(--i), var(--c))) * 50ms);
+	translate: calc(var(--i) * -100%) 0px 0px;
+	transform: translateZ(
+		calc((var(--c) - var(--i) - 0.5) * calc(var(--thickness) * 1px))
+	);
+	rotate: 0 1 0 calc(clamp(0, var(--c) - var(--i), 1) * -180deg);
+}
+
+.page img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
 
 .front,
 .back {
-    flex: none;
-    width: 100%;
-    padding: 2rem;
-    backface-visibility: hidden;
-    background-color: var(--page-color);
-    translate: 0px;
+	flex: none;
+	width: 100%;
+	padding: 2rem;
+	backface-visibility: hidden;
+	background-color: var(--page-color);
+	translate: 0px;
 }
 
 .back {
-    background-image: linear-gradient(
-        to right,
-        var(--page-color) 80%,
-        var(--page-color2) 100%
-    );
-    translate: -100% 0;
-    rotate: 0 1 0 180deg;
+	background-image: linear-gradient(
+		to right,
+		var(--page-color) 80%,
+		var(--page-color2) 100%
+	);
+	translate: -100% 0;
+	rotate: 0 1 0 180deg;
 }
 
 .cover {
-    background: url(imgs/book_cover.jpg) no-repeat center/cover;
-    border: 5px solid rgba(34, 2, 34, 0.733);
+	background: url(imgs/book_cover.jpg) no-repeat center/cover;
+	border: 8px solid rgba(34, 2, 34, 0.733);
+}
+
+.page audio {
+    position: relative;
+    z-index: 100;
 }
 
 /*--------------->>> DISPLAYS <<<---------------*/
